@@ -40,7 +40,7 @@ PYTHONPATH=src python3 -m unittest discover -s tests
 ### 2. 拿到代码
 
 ```bash
-git clone https://github.com/<你的用户名>/refcheck.git
+git clone https://github.com/yeqv111/refcheck.git
 cd refcheck
 ```
 
