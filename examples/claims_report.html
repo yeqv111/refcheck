@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RefCheck · 医学陈述溯源核查</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                 "Microsoft YaHei", sans-serif;
+    background: #F5F4F0; color: #1F1F1D; line-height: 1.6;
+    padding: 32px 20px 40px; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .card {
+    background: #fff; border-radius: 16px; padding: 28px 28px 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 28px rgba(0,0,0,.05);
+  }
+  h1 { font-size: 24px; font-weight: 600; letter-spacing: -.3px; }
+  .sub { color: #86847C; font-size: 13px; margin-top: 6px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 26px 0 8px; }
+  .stat { background: #FAFAF7; border-radius: 12px; padding: 16px 16px 14px; }
+  .stat-num { font-size: 30px; font-weight: 600; line-height: 1.1; }
+  .stat-name { font-size: 12px; color: #6B6A64; margin: 4px 0 10px; }
+  .track { height: 5px; background: #E8E6DF; border-radius: 3px; overflow: hidden; }
+  .fill { height: 100%; border-radius: 3px; }
+  .warn {
+    background: #FCF3E2; color: #7A4E0C; border-radius: 10px;
+    padding: 12px 14px; font-size: 13px; margin: 18px 0 4px; line-height: 1.55;
+  }
+  .warn strong { font-weight: 600; }
+  .sec { font-size: 13px; color: #86847C; margin: 26px 0 10px; letter-spacing: .5px; }
+  .item {
+    display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid #EFEDE6;
+  }
+  .bar { width: 3px; border-radius: 2px; flex: none; }
+  .body { flex: 1; min-width: 0; }
+  .head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .idx { font-size: 12px; color: #A8A69E; font-variant-numeric: tabular-nums; }
+  .badge { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 5px; }
+  .meta { font-size: 12px; color: #9A9890; }
+  .text { font-size: 14px; margin-top: 6px; word-break: break-word; }
+  .query { font-size: 12px; color: #9A9890; margin-top: 5px; font-family: ui-monospace, monospace; }
+  .src {
+    display: flex; align-items: baseline; gap: 7px; margin-top: 7px;
+    font-size: 12px; flex-wrap: wrap;
+  }
+  .dot { width: 5px; height: 5px; border-radius: 50%; background: #C9C7BE; flex: none; }
+  .sitename { color: #4A4944; font-weight: 500; }
+  .date { color: #A8A69E; }
+  .src a { color: #185FA5; text-decoration: none; overflow: hidden; text-overflow: ellipsis;
+            white-space: nowrap; max-width: 480px; }
+  .note { font-size: 12px; color: #9A9890; margin-top: 5px; }
+  .foot {
+    margin-top: 26px; padding: 16px 0 20px; border-top: 1px solid #EFEDE6;
+    font-size: 12px; color: #9A9890; line-height: 1.7;
+  }
+  .foot b { color: #6B6A64; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>RefCheck · 医学陈述溯源核查</h1>
+    <div class="sub">answer.txt · 19 条　·　2026-11-09 19:53　·　元宝搜索 standard　·　调用 19 次</div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num" style="color:#1D9E75">12</div>
+        <div class="stat-name">有出处 · 63%</div>
+        <div class="track"><div class="fill" style="width:63.2%;background:#1D9E75"></div></div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" style="color:#BA7517">4</div>
+        <div class="stat-name">弱支撑 · 21%</div>
+        <div class="track"><div class="fill" style="width:21.1%;background:#BA7517"></div></div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" style="color:#E24B4A">3</div>
+        <div class="stat-name">未找到 · 16%</div>
+        <div class="track"><div class="fill" style="width:15.8%;background:#E24B4A"></div></div>
+      </div></div>
+    
+  <div class="warn">
+    <strong>3 条「有结果、但对不上」</strong>
+    搜索引擎返回了内容，却没有一条是它 —— 这是编造内容最典型的形态。
+  </div>
+
+    <div class="sec">核查明细</div>
+    
+    <div class="item">
+      <div class="bar" style="background:#E24B4A"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">01</span>
+          <span class="badge" style="color:#E24B4A;background:#FCEDEC">未找到</span>
+          <span class="meta">覆盖 33% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">总体结论：首选沙坦类（尤其是氯沙坦），严格避开噻嗪类利尿剂，次选普利类或特定β受体阻滞剂</div>
+        <div class="query">检索词　首选沙坦 尤其是氯沙坦 次选普利 严格避开噻嗪 噻嗪类利尿剂</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">科普中国网</span>
+        <span class="date">2024/12/15</span>
+        <a href="https://www.kepuchina.cn/article/articleinfo?business_type=100&amp;ar_id=557862" target="_blank">高压不高低压高,选择什么降压药?</a>
+      </div>
+        <div class="note">实体覆盖仅 33%，返回的多为主题相近但无关的内容</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">02</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">一、首选：沙坦类（ARB） 代表药物：氯沙坦、缬沙坦等</div>
+        <div class="query">检索词　氯沙坦 缬沙坦 ARB</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">澎湃新闻</span>
+        <span class="date">2025/07/11</span>
+        <a href="https://www.thepaper.cn/newsDetail_forward_31164078" target="_blank">实话石说  “沙坦”类降压药物,因药而异,因人而异</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（氯沙坦、缬沙坦、ARB），来源属于媒体</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">03</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 75% · 来源官方 · 返回 10 条</span>
+        </div>
+        <div class="text">用药依据：国家老年疾病临床医学研究中心发布的《高尿酸血症与痛风健康管理指南》（2025年）明确指出，合并…</div>
+        <div class="query">检索词　药物包括氯沙坦 高血压 痛风 高尿酸血症</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">玛纳斯县人民政府网</span>
+        <span class="date">2022/10/19</span>
+        <a href="https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html" target="_blank">18种高血压首选/禁用药</a>
+      </div>
+        <div class="note">关键实体覆盖 75%（高血压、痛风、高尿酸血症），来源属于官方</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">04</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">氯沙坦在降压的同时还能促进尿酸排泄</div>
+        <div class="query">检索词　氯沙坦 尿酸</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">人民日报</span>
+        <span class="date">2020/11/20</span>
+        <a href="https://www.peopleapp.com/rmharticle/30018418207" target="_blank">你的尿酸为啥偷偷涨了?快看有没有用这类药!</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（氯沙坦、尿酸），来源属于媒体</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">05</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">用药期间需定期监测血钾和肾功能</div>
+        <div class="query">检索词　血钾 肾功能 首选沙坦</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">科普中国网</span>
+        <span class="date">2026/07/06</span>
+        <a href="https://www.kepuchina.cn/article/articleinfo?ar_id=717168&amp;business_type=100&amp;classify=0" target="_blank">不伤肾的降压药有哪些?关键在于代谢路径与靶器官保护平衡</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（血钾、肾功能），来源属于媒体</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">06</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源官方 · 返回 10 条</span>
+        </div>
+        <div class="text">与尿酸的相互影响：氯沙坦具有明确的促尿酸排泄作用，可使血尿酸水平进一步下降约7%～15%，是高血压合并高…</div>
+        <div class="query">检索词　氯沙坦 血尿酸 高血压 高尿酸血症</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">玛纳斯县人民政府网</span>
+        <span class="date">2022/10/19</span>
+        <a href="https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html" target="_blank">18种高血压首选/禁用药</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（氯沙坦、血尿酸、高血压、高尿酸血症），来源属于官方</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">07</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">二、次选：普利类（ACEI） 代表药物：依那普利、贝那普利、福辛普利等</div>
+        <div class="query">检索词　依那普利 贝那普利 福辛普利 ACEI</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">科普中国网</span>
+        <span class="date">2020/03/29</span>
+        <a href="https://www.kepuchina.cn/article/articleinfo?business_type=100&amp;classify=0&amp;ar_id=10464" target="_blank">普利类降压药,包括哪些药物?这种药物适合哪些人?</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（依那普利、贝那普利、福辛普利、ACEI），来源属于媒体</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">08</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">弱支撑</span>
+          <span class="meta">覆盖 100% · 来源官方 · 返回 10 条</span>
+        </div>
+        <div class="text">用药依据：沙坦类与普利类均能有效降压，且对尿酸代谢基本呈中性，不会干扰肾脏对尿酸的排泄</div>
+        <div class="query">检索词　尿酸 首选沙坦</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">玛纳斯县人民政府网</span>
+        <span class="date">2022/10/19</span>
+        <a href="https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html" target="_blank">18种高血压首选/禁用药</a>
+      </div>
+        <div class="note">只提到 1 个关键实体（尿酸），证据面太窄</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">09</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源媒体 · 返回 9 条</span>
+        </div>
+        <div class="text">部分患者可能出现干咳，需监测血肌酐和血钾</div>
+        <div class="query">检索词　肌酐 血钾 首选沙坦</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">科普中国网</span>
+        <span class="date">2024/02/23</span>
+        <a href="https://www.kepuchina.cn/article/articleinfo?business_type=100&amp;ar_id=479693" target="_blank">降压药那么多,慢性肾脏病合并高血压患者应该怎么选?</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（肌酐、血钾），来源属于媒体</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">10</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源官方 · 返回 10 条</span>
+        </div>
+        <div class="text">与尿酸的相互影响：对血尿酸水平无明显不良影响，不会加重高尿酸血症，属于安全的备选方案</div>
+        <div class="query">检索词　血尿酸 高尿酸血症 首选沙坦</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">玛纳斯县人民政府网</span>
+        <span class="date">2022/10/19</span>
+        <a href="https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html" target="_blank">18种高血压首选/禁用药</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（血尿酸、高尿酸血症），来源属于官方</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">11</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">弱支撑</span>
+          <span class="meta">覆盖 67% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">三、备选：β受体阻滞剂 代表药物：美托洛尔、倍他洛尔</div>
+        <div class="query">检索词　美托洛尔 倍他洛尔 β受体阻滞剂</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">科普中国网</span>
+        <span class="date">2024/03/04</span>
+        <a href="https://cloud.kepuchina.cn/newSearch/imgText?id=7164011122605441024" target="_blank">β受体阻滞剂</a>
+      </div>
+        <div class="note">实体覆盖 67%，有相关讨论但未找到直接支撑</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">12</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">弱支撑</span>
+          <span class="meta">覆盖 100% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">用药依据：若上述两类药物降压效果不佳或存在禁忌，可考虑选用特定的β受体阻滞剂</div>
+        <div class="query">检索词　β受体阻滞剂</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">科普中国网</span>
+        <span class="date">2021/12/31</span>
+        <a href="https://www.kepuchina.cn/article/articleinfo?business_type=100&amp;classify=0&amp;ar_id=291554" target="_blank">[科普中国]-β受体阻滞剂</a>
+      </div>
+        <div class="note">只提到 1 个关键实体（β受体阻滞剂），证据面太窄</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#E24B4A"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">13</span>
+          <span class="badge" style="color:#E24B4A;background:#FCEDEC">未找到</span>
+          <span class="meta">覆盖 33% · 来源未知 · 返回 10 条</span>
+        </div>
+        <div class="text">与尿酸的相互影响：应严格避开盘托洛尔、纳多洛尔等会阻碍尿酸经肾脏排泄的药物</div>
+        <div class="query">检索词　格避开盘托洛尔 纳多洛尔 尿酸</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">大众健康报科普网</span>
+        <span class="date">2024/06/28</span>
+        <a href="https://www.dzjkb.org.cn/dazhongkepu/84511.html" target="_blank">高血压合并其它疾病的合理用药</a>
+      </div>
+        <div class="note">实体覆盖仅 33%，返回的多为主题相近但无关的内容</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">14</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">弱支撑</span>
+          <span class="meta">覆盖 67% · 来源未知 · 返回 10 条</span>
+        </div>
+        <div class="text">优先选择美托洛尔或倍他洛尔，它们对尿酸的影响相对较小</div>
+        <div class="query">检索词　先选择美托洛尔 倍他洛尔 尿酸</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">大众健康报科普网</span>
+        <span class="date">2024/06/28</span>
+        <a href="https://www.dzjkb.org.cn/dazhongkepu/84511.html" target="_blank">高血压合并其它疾病的合理用药</a>
+      </div>
+        <div class="note">实体覆盖 67%，但来源是未知，不足以支撑</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">15</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">四、绝对应避免：噻嗪类／袢利尿剂 代表药物：氢氯噻嗪、呋塞米、吲达帕胺等</div>
+        <div class="query">检索词　氢氯噻嗪 吲达帕胺 噻嗪类 袢利尿剂</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">科普中国网</span>
+        <span class="date">2026/07/27</span>
+        <a href="https://www.kepuchina.cn/article/articleinfo?ar_id=722731&amp;business_type=100" target="_blank">浅谈六类利尿剂</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（氢氯噻嗪、吲达帕胺、噻嗪类、袢利尿剂），来源属于媒体</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">16</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 80% · 来源官方 · 返回 10 条</span>
+        </div>
+        <div class="text">避免原因：《国家基层高血压防治管理指南》（2025年）明确指出，高尿酸血症患者慎用噻嗪类利尿剂，痛风患者…</div>
+        <div class="query">检索词　患者慎用噻嗪 高血压 痛风 高尿酸血症 噻嗪类利尿剂</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">玛纳斯县人民政府网</span>
+        <span class="date">2022/10/19</span>
+        <a href="https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html" target="_blank">18种高血压首选/禁用药</a>
+      </div>
+        <div class="note">关键实体覆盖 80%（高血压、痛风、高尿酸血症、噻嗪类利尿剂），来源属于官方</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">17</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">利尿剂会减少血容量并增加尿酸在肾小管的重吸收，导致血尿酸进一步升高，极易诱发痛风</div>
+        <div class="query">检索词　血尿酸 痛风 利尿剂</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">人民日报</span>
+        <span class="date">2025/04/17</span>
+        <a href="https://www.peopleapp.com/rmharticle/30048814115" target="_blank">东部战区总医院心血管内科:痛风遇上高血压,该如何选择降压药?</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（血尿酸、痛风、利尿剂），来源属于媒体</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#E24B4A"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">18</span>
+          <span class="badge" style="color:#E24B4A;background:#FCEDEC">未找到</span>
+          <span class="meta">覆盖 0% · 来源官方 · 返回 10 条</span>
+        </div>
+        <div class="text">用药与随访提示：建议在心内科医生指导下优先尝试氯沙坦</div>
+        <div class="query">检索词　优先尝试氯沙坦</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">玛纳斯县人民政府网</span>
+        <span class="date">2022/10/19</span>
+        <a href="https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html" target="_blank">18种高血压首选/禁用药</a>
+      </div>
+        <div class="note">实体覆盖仅 0%，返回的多为主题相近但无关的内容</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">19</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">有出处</span>
+          <span class="meta">覆盖 100% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">用药期间每2～4周复查血尿酸、血钾和肾功能，同时注意低盐低嘌呤饮食并适量饮水</div>
+        <div class="query">检索词　血钾 肾功能 血尿酸 首选沙坦</div>
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">科普中国网</span>
+        <span class="date">2026/05/20</span>
+        <a href="https://www.kepuchina.cn/article/articleinfo?ar_id=704265&amp;business_type=100" target="_blank">肝肾损伤患者选择降压药时,如何减少肝肾负担?</a>
+      </div>
+        <div class="note">关键实体覆盖 100%（血钾、肾功能、血尿酸），来源属于媒体</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <b>方法</b>　每条内容单独检索，取关键实体覆盖比例最高的一条（药名、指标、疾病、药物类别），结合来源分级（官方 / 学术 / 媒体 / 百科 / 聚合站）给出判定。<br>
+      <b>限制</b>　「未找到」只说明本次检索没有找到覆盖这些实体的权威资料，不等于该结论在医学上错误；「弱支撑」同理。<br>
+      <b>声明</b>　本工具只验证出处，不提供任何医疗建议，不构成诊断依据。身体不适请前往正规医疗机构就诊。
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RefCheck · 参考文献溯源核查</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+                 "Microsoft YaHei", sans-serif;
+    background: #F5F4F0; color: #1F1F1D; line-height: 1.6;
+    padding: 32px 20px 40px; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .card {
+    background: #fff; border-radius: 16px; padding: 28px 28px 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 28px rgba(0,0,0,.05);
+  }
+  h1 { font-size: 24px; font-weight: 600; letter-spacing: -.3px; }
+  .sub { color: #86847C; font-size: 13px; margin-top: 6px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 26px 0 8px; }
+  .stat { background: #FAFAF7; border-radius: 12px; padding: 16px 16px 14px; }
+  .stat-num { font-size: 30px; font-weight: 600; line-height: 1.1; }
+  .stat-name { font-size: 12px; color: #6B6A64; margin: 4px 0 10px; }
+  .track { height: 5px; background: #E8E6DF; border-radius: 3px; overflow: hidden; }
+  .fill { height: 100%; border-radius: 3px; }
+  .warn {
+    background: #FCF3E2; color: #7A4E0C; border-radius: 10px;
+    padding: 12px 14px; font-size: 13px; margin: 18px 0 4px; line-height: 1.55;
+  }
+  .warn strong { font-weight: 600; }
+  .sec { font-size: 13px; color: #86847C; margin: 26px 0 10px; letter-spacing: .5px; }
+  .item {
+    display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid #EFEDE6;
+  }
+  .bar { width: 3px; border-radius: 2px; flex: none; }
+  .body { flex: 1; min-width: 0; }
+  .head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .idx { font-size: 12px; color: #A8A69E; font-variant-numeric: tabular-nums; }
+  .badge { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 5px; }
+  .meta { font-size: 12px; color: #9A9890; }
+  .text { font-size: 14px; margin-top: 6px; word-break: break-word; }
+  .query { font-size: 12px; color: #9A9890; margin-top: 5px; font-family: ui-monospace, monospace; }
+  .src {
+    display: flex; align-items: baseline; gap: 7px; margin-top: 7px;
+    font-size: 12px; flex-wrap: wrap;
+  }
+  .dot { width: 5px; height: 5px; border-radius: 50%; background: #C9C7BE; flex: none; }
+  .sitename { color: #4A4944; font-weight: 500; }
+  .date { color: #A8A69E; }
+  .src a { color: #185FA5; text-decoration: none; overflow: hidden; text-overflow: ellipsis;
+            white-space: nowrap; max-width: 480px; }
+  .note { font-size: 12px; color: #9A9890; margin-top: 5px; }
+  .foot {
+    margin-top: 26px; padding: 16px 0 20px; border-top: 1px solid #EFEDE6;
+    font-size: 12px; color: #9A9890; line-height: 1.7;
+  }
+  .foot b { color: #6B6A64; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>RefCheck · 参考文献溯源核查</h1>
+    <div class="sub">refs.txt · 20 条　·　2026-11-09 19:52　·　元宝搜索 standard　·　调用 20 次</div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num" style="color:#1D9E75">11</div>
+        <div class="stat-name">已核实 · 55%</div>
+        <div class="track"><div class="fill" style="width:55.0%;background:#1D9E75"></div></div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" style="color:#BA7517">7</div>
+        <div class="stat-name">存疑 · 35%</div>
+        <div class="track"><div class="fill" style="width:35.0%;background:#BA7517"></div></div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" style="color:#E24B4A">2</div>
+        <div class="stat-name">查无出处 · 10%</div>
+        <div class="track"><div class="fill" style="width:10.0%;background:#E24B4A"></div></div>
+      </div></div>
+    
+  <div class="warn">
+    <strong>2 条「有结果、但对不上」</strong>
+    搜索引擎返回了内容，却没有一条是它 —— 这是编造内容最典型的形态。
+  </div>
+
+    <div class="sec">核查明细</div>
+    
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">01</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 100% · 来源学术 · 返回 10 条</span>
+        </div>
+        <div class="text">55例非特异性慢性肉芽肿性炎中抗酸菌L型感染的探讨</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">中国知网</span>
+        <span class="date">2001/05/30</span>
+        <a href="https://zdbl.cbpt.cnki.net/portal/journal/portal/client/paper/f2b2b324dd3e64051568c4c6cf8e68c7" target="_blank">55例非特异性慢性肉芽肿性炎中抗酸菌L型感染的探讨</a>
+      </div>
+        <div class="note">正文命中标题原文，匹配度 100%，来源属于学术</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">02</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 63% · 来源未知 · 返回 10 条</span>
+        </div>
+        <div class="text">肉芽肿性小叶性乳腺炎的临床病理学特征分析</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">国家知识仓储平台</span>
+        <span class="date"></span>
+        <a href="https://pubnr.napstic.cn/periodicalArticle/010zwyxyj202105031" target="_blank">141例肉芽肿性小叶性乳腺炎临床病理分析</a>
+      </div>
+        <div class="note">标题比对，匹配度 63%，来源属于未知</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">03</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">存疑</span>
+          <span class="meta">匹配 41% · 来源学术 · 返回 10 条</span>
+        </div>
+        <div class="text">肉芽肿性小叶性乳腺炎的发病机制及其与自身免疫的关联: 综述与展望</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">中华医学期刊网</span>
+        <span class="date"></span>
+        <a href="https://cs.medjournals.cn/article/doi/full/10.3760/cma.j.cn112150-20251112-01074" target="_blank">肉芽肿性小叶性乳腺炎的易感因素与发病机制研究进展</a>
+      </div>
+        <div class="note">标题比对，匹配度 41%，找到相近内容但不足以确认</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">04</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 88% · 来源学术 · 返回 10 条</span>
+        </div>
+        <div class="text">食管鳞癌中细胞凋亡、MVD及PCNA、VEGF表达的临床意义</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">维普网</span>
+        <span class="date"></span>
+        <a href="http://dianda.cqvip.com/Qikan/Article/Detail?id=9025641" target="_blank">食管鳞癌中细胞凋亡､MVD及PCNA､VEGF表达的临床意义</a>
+      </div>
+        <div class="note">正文命中标题原文，匹配度 88%，来源属于学术</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">05</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 100% · 来源未知 · 返回 10 条</span>
+        </div>
+        <div class="text">宫颈癌病理特征与预后的关系探讨</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">国家知识仓储平台</span>
+        <span class="date"></span>
+        <a href="https://pubnr.napstic.cn/periodicalArticle/010syjyyszz201203006" target="_blank">宫颈癌病理特征与预后的关系探讨</a>
+      </div>
+        <div class="note">正文命中标题原文，匹配度 100%，来源属于未知</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">06</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 100% · 来源学术 · 返回 10 条</span>
+        </div>
+        <div class="text">13例肝未分化(胚胎性)肉瘤临床病理学观察</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">中国知网</span>
+        <span class="date">2004/06/28</span>
+        <a href="https://zdbl.cbpt.cnki.net/portal/journal/portal/client/paper/a0db6b158e656c064409b4ddd1f91036" target="_blank">13例肝未分化(胚胎性)肉瘤临床病理学观察</a>
+      </div>
+        <div class="note">正文命中标题原文，匹配度 100%，来源属于学术</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">07</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">存疑</span>
+          <span class="meta">匹配 41% · 来源聚合站 · 返回 10 条</span>
+        </div>
+        <div class="text">动脉粥样硬化血栓形成疾病的发病机制进展</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">民福康</span>
+        <span class="date">2026/09/03</span>
+        <a href="https://mip.mfk.com/article/16140941.shtml" target="_blank">动脉粥样硬化血栓是怎样形成的</a>
+      </div>
+        <div class="note">标题比对，匹配度 41%；来源是内容聚合站，无一手出处</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">08</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">存疑</span>
+          <span class="meta">匹配 34% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">高脂血症与血栓形成</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">央视国际</span>
+        <span class="date">2004/05/08</span>
+        <a href="https://big5.cctv.com/gate/big5/www.cctv.cn/health/special/office/20040508/101931.shtml" target="_blank">病從“口”做起—高脂血症的防治</a>
+      </div>
+        <div class="note">标题比对，匹配度 34%，找到相近内容但不足以确认</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">09</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">存疑</span>
+          <span class="meta">匹配 41% · 来源聚合站 · 返回 10 条</span>
+        </div>
+        <div class="text">炎症在动脉粥样硬化血栓形成疾病中的作用</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">民福康</span>
+        <span class="date">2026/09/25</span>
+        <a href="https://m.mfk.com/ask/18193595.shtml" target="_blank">动脉粥样硬化合并血栓形成的主要原因是</a>
+      </div>
+        <div class="note">标题比对，匹配度 41%；来源是内容聚合站，无一手出处</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">10</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 100% · 来源学术 · 返回 10 条</span>
+        </div>
+        <div class="text">肝硬化门静脉血栓形成机制研究进展</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">中国计量大学</span>
+        <span class="date"></span>
+        <a href="https://slib.cjlu.edu.cn/articlesearch/web_searchingDetail?id=2031566634630" target="_blank">肝硬化门静脉血栓形成机制研究进展</a>
+      </div>
+        <div class="note">正文命中标题原文，匹配度 100%，来源属于学术</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">11</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 100% · 来源未知 · 返回 10 条</span>
+        </div>
+        <div class="text">闭胸式猪急性心肌梗死后心肌病理切片的观察</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">医学论坛网</span>
+        <span class="date">2015/09/29</span>
+        <a href="https://m.cmt.com.cn/detail/951775.html" target="_blank">闭胸式猪急性心肌梗死后心肌病理切片的观察</a>
+      </div>
+        <div class="note">正文命中标题原文，匹配度 100%，来源属于未知</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">12</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">存疑</span>
+          <span class="meta">匹配 46% · 来源聚合站 · 返回 10 条</span>
+        </div>
+        <div class="text">81例脑梗死的临床病理分析</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">有问必答网</span>
+        <span class="date">2012/04/15</span>
+        <a href="https://m.120ask.com/askg/posts_detail/28955490" target="_blank">老年人脑梗死包含的临床病理类型</a>
+      </div>
+        <div class="note">标题比对，匹配度 46%；来源是内容聚合站，无一手出处</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">13</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 72% · 来源未知 · 返回 10 条</span>
+        </div>
+        <div class="text">骨梗死的影像学表现及其病理基础</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">中国医学影像技术</span>
+        <span class="date">2006/11/21</span>
+        <a href="https://www.cjmit.com/cjmit/ch/reader/view_abstract.aspx?file_no=20070527" target="_blank">骨梗死影像学表现及其病理学基础</a>
+      </div>
+        <div class="note">标题比对，匹配度 72%，来源属于未知</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">14</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 100% · 来源学术 · 返回 10 条</span>
+        </div>
+        <div class="text">超急性期脑梗死CT灌注图中缺血半暗带的定位及病理基础的实验研究</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">维普网</span>
+        <span class="date"></span>
+        <a href="http://dianda.cqvip.com/Qikan/Article/Detail?id=10656555" target="_blank">超急性期脑梗死CT灌注图中缺血半暗带的定位及病理基础的实验研究</a>
+      </div>
+        <div class="note">正文命中标题原文，匹配度 100%，来源属于学术</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">15</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 100% · 来源学术 · 返回 10 条</span>
+        </div>
+        <div class="text">创伤后肝细胞凋亡与坏死的检测及其意义</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">中国科技期刊数字化集群</span>
+        <span class="date">2002/01/01</span>
+        <a href="https://www.zgkjqk.com/periodical/dyjydxxb/dyjydxxb200205004" target="_blank">创伤后肝细胞凋亡与坏死的检测及其意义</a>
+      </div>
+        <div class="note">正文命中标题原文，匹配度 100%，来源属于学术</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">16</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">存疑</span>
+          <span class="meta">匹配 51% · 来源未知 · 返回 10 条</span>
+        </div>
+        <div class="text">心力衰竭心肌细胞凋亡及其调控机制的研究</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">中国实验方剂学杂志</span>
+        <span class="date">2025/07/10</span>
+        <a href="https://www.syfjxzz.com/article/doi/10.13422/j.cnki.syfjx.20241813" target="_blank">慢性心力衰竭心肌细胞凋亡及中医药干预</a>
+      </div>
+        <div class="note">标题比对，匹配度 51%，找到相近内容但不足以确认</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#BA7517"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">17</span>
+          <span class="badge" style="color:#BA7517;background:#FCF3E2">存疑</span>
+          <span class="meta">匹配 61% · 来源聚合站 · 返回 10 条</span>
+        </div>
+        <div class="text">高血压心脏重构</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">博禾医生</span>
+        <span class="date"></span>
+        <a href="https://m.bohe.cn/ask/liangyi/i0jcdxcn08kepsd.html" target="_blank">高血压心脏的主要改变是什么</a>
+      </div>
+        <div class="note">标题比对，匹配度 61%；来源是内容聚合站，无一手出处</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#E24B4A"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">18</span>
+          <span class="badge" style="color:#E24B4A;background:#FCEDEC">查无出处</span>
+          <span class="meta">匹配 28% · 来源媒体 · 返回 10 条</span>
+        </div>
+        <div class="text">高血压微血管发病机制研究进展</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">新华网</span>
+        <span class="date">2026/02/06</span>
+        <a href="https://www.news.cn/digital/20260206/0f17a8c6c68a4c4cbc46d3e8770544fc/c.html" target="_blank">为何高血压患者的血压降低后,头晕头胀依旧?韩晶岩教授揭示脑微血管“渗漏”的机理和中医药新解</a>
+      </div>
+        <div class="note">标题比对，匹配度仅 28%，返回的多为主题相近的无关内容</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#1D9E75"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">19</span>
+          <span class="badge" style="color:#1D9E75;background:#E8F6F0">已核实</span>
+          <span class="meta">匹配 100% · 来源学术 · 返回 10 条</span>
+        </div>
+        <div class="text">糖尿病肝微血管病变临床病理学观察</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">医谷网</span>
+        <span class="date"></span>
+        <a href="https://rs.yiigle.com/cmaid/90339" target="_blank">糖尿病肝微血管病变临床病理学观察</a>
+      </div>
+        <div class="note">正文命中标题原文，匹配度 100%，来源属于学术</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="bar" style="background:#E24B4A"></div>
+      <div class="body">
+        <div class="head">
+          <span class="idx">20</span>
+          <span class="badge" style="color:#E24B4A;background:#FCEDEC">查无出处</span>
+          <span class="meta">匹配 32% · 来源聚合站 · 返回 10 条</span>
+        </div>
+        <div class="text">糖尿病足神经病变与血管病变的病理学研究</div>
+        
+        
+      <div class="src">
+        <span class="dot"></span>
+        <span class="sitename">民福康</span>
+        <span class="date">2026/09/26</span>
+        <a href="https://mip.mfk.com/ask/20870654.shtml" target="_blank">糖尿病神经病变会导致糖尿病足</a>
+      </div>
+        <div class="note">标题比对，匹配度仅 32%，返回的多为主题相近的无关内容</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <b>方法</b>　每条内容单独检索，取标题相似度最高的一条，正文命中标题原文时加分，结合来源分级（官方 / 学术 / 媒体 / 百科 / 聚合站）给出判定。<br>
+      <b>限制</b>　「查无出处」只说明本次检索未找到可靠出处，不等于该结论在医学上错误；「存疑」同理。<br>
+      <b>声明</b>　本工具只验证出处，不提供任何医疗建议，不构成诊断依据。身体不适请前往正规医疗机构就诊。
+    </div>
+  </div>
+</div>
+</body>
+</html>

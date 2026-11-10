@@ -1,0 +1,319 @@
+{
+  "title": "参考文献溯源核查",
+  "version": "standard",
+  "calls": 20,
+  "total": 20,
+  "verified": 11,
+  "doubt": 7,
+  "missing": 2,
+  "misleading": 2,
+  "empty_result": 0,
+  "tier_counts": {
+    "academic": 8,
+    "unknown": 5,
+    "farm": 5,
+    "media": 2
+  },
+  "items": [
+    {
+      "index": 1,
+      "label": "55例非特异性慢性肉芽肿性炎中抗酸菌L型感染的探讨",
+      "query": "55例非特异性慢性肉芽肿性炎中抗酸菌L型感染的探讨",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "academic",
+      "candidates": 10,
+      "source": {
+        "title": "55例非特异性慢性肉芽肿性炎中抗酸菌L型感染的探讨",
+        "url": "https://zdbl.cbpt.cnki.net/portal/journal/portal/client/paper/f2b2b324dd3e64051568c4c6cf8e68c7",
+        "site": "中国知网",
+        "date": "2001/05/30"
+      }
+    },
+    {
+      "index": 2,
+      "label": "肉芽肿性小叶性乳腺炎的临床病理学特征分析",
+      "query": "肉芽肿性小叶性乳腺炎的临床病理学特征分析",
+      "verdict": "已核实",
+      "similarity": 0.6295,
+      "tier": "unknown",
+      "candidates": 10,
+      "source": {
+        "title": "141例肉芽肿性小叶性乳腺炎临床病理分析",
+        "url": "https://pubnr.napstic.cn/periodicalArticle/010zwyxyj202105031",
+        "site": "国家知识仓储平台",
+        "date": ""
+      }
+    },
+    {
+      "index": 3,
+      "label": "肉芽肿性小叶性乳腺炎的发病机制及其与自身免疫的关联: 综述与展望",
+      "query": "肉芽肿性小叶性乳腺炎的发病机制及其与自身免疫的关联: 综述与展望",
+      "verdict": "存疑",
+      "similarity": 0.4124,
+      "tier": "academic",
+      "candidates": 10,
+      "source": {
+        "title": "肉芽肿性小叶性乳腺炎的易感因素与发病机制研究进展",
+        "url": "https://cs.medjournals.cn/article/doi/full/10.3760/cma.j.cn112150-20251112-01074",
+        "site": "中华医学期刊网",
+        "date": ""
+      }
+    },
+    {
+      "index": 4,
+      "label": "食管鳞癌中细胞凋亡、MVD及PCNA、VEGF表达的临床意义",
+      "query": "食管鳞癌中细胞凋亡、MVD及PCNA、VEGF表达的临床意义",
+      "verdict": "已核实",
+      "similarity": 0.88,
+      "tier": "academic",
+      "candidates": 10,
+      "source": {
+        "title": "食管鳞癌中细胞凋亡､MVD及PCNA､VEGF表达的临床意义",
+        "url": "http://dianda.cqvip.com/Qikan/Article/Detail?id=9025641",
+        "site": "维普网",
+        "date": ""
+      }
+    },
+    {
+      "index": 5,
+      "label": "宫颈癌病理特征与预后的关系探讨",
+      "query": "宫颈癌病理特征与预后的关系探讨",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "unknown",
+      "candidates": 10,
+      "source": {
+        "title": "宫颈癌病理特征与预后的关系探讨",
+        "url": "https://pubnr.napstic.cn/periodicalArticle/010syjyyszz201203006",
+        "site": "国家知识仓储平台",
+        "date": ""
+      }
+    },
+    {
+      "index": 6,
+      "label": "13例肝未分化(胚胎性)肉瘤临床病理学观察",
+      "query": "13例肝未分化(胚胎性)肉瘤临床病理学观察",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "academic",
+      "candidates": 10,
+      "source": {
+        "title": "13例肝未分化(胚胎性)肉瘤临床病理学观察",
+        "url": "https://zdbl.cbpt.cnki.net/portal/journal/portal/client/paper/a0db6b158e656c064409b4ddd1f91036",
+        "site": "中国知网",
+        "date": "2004/06/28"
+      }
+    },
+    {
+      "index": 7,
+      "label": "动脉粥样硬化血栓形成疾病的发病机制进展",
+      "query": "动脉粥样硬化血栓形成疾病的发病机制进展",
+      "verdict": "存疑",
+      "similarity": 0.4089,
+      "tier": "farm",
+      "candidates": 10,
+      "source": {
+        "title": "动脉粥样硬化血栓是怎样形成的",
+        "url": "https://mip.mfk.com/article/16140941.shtml",
+        "site": "民福康",
+        "date": "2026/09/03"
+      }
+    },
+    {
+      "index": 8,
+      "label": "高脂血症与血栓形成",
+      "query": "高脂血症与血栓形成",
+      "verdict": "存疑",
+      "similarity": 0.345,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "病從“口”做起—高脂血症的防治",
+        "url": "https://big5.cctv.com/gate/big5/www.cctv.cn/health/special/office/20040508/101931.shtml",
+        "site": "央视国际",
+        "date": "2004/05/08"
+      }
+    },
+    {
+      "index": 9,
+      "label": "炎症在动脉粥样硬化血栓形成疾病中的作用",
+      "query": "炎症在动脉粥样硬化血栓形成疾病中的作用",
+      "verdict": "存疑",
+      "similarity": 0.4089,
+      "tier": "farm",
+      "candidates": 10,
+      "source": {
+        "title": "动脉粥样硬化合并血栓形成的主要原因是",
+        "url": "https://m.mfk.com/ask/18193595.shtml",
+        "site": "民福康",
+        "date": "2026/09/25"
+      }
+    },
+    {
+      "index": 10,
+      "label": "肝硬化门静脉血栓形成机制研究进展",
+      "query": "肝硬化门静脉血栓形成机制研究进展",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "academic",
+      "candidates": 10,
+      "source": {
+        "title": "肝硬化门静脉血栓形成机制研究进展",
+        "url": "https://slib.cjlu.edu.cn/articlesearch/web_searchingDetail?id=2031566634630",
+        "site": "中国计量大学",
+        "date": ""
+      }
+    },
+    {
+      "index": 11,
+      "label": "闭胸式猪急性心肌梗死后心肌病理切片的观察",
+      "query": "闭胸式猪急性心肌梗死后心肌病理切片的观察",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "unknown",
+      "candidates": 10,
+      "source": {
+        "title": "闭胸式猪急性心肌梗死后心肌病理切片的观察",
+        "url": "https://m.cmt.com.cn/detail/951775.html",
+        "site": "医学论坛网",
+        "date": "2015/09/29"
+      }
+    },
+    {
+      "index": 12,
+      "label": "81例脑梗死的临床病理分析",
+      "query": "81例脑梗死的临床病理分析",
+      "verdict": "存疑",
+      "similarity": 0.46,
+      "tier": "farm",
+      "candidates": 10,
+      "source": {
+        "title": "老年人脑梗死包含的临床病理类型",
+        "url": "https://m.120ask.com/askg/posts_detail/28955490",
+        "site": "有问必答网",
+        "date": "2012/04/15"
+      }
+    },
+    {
+      "index": 13,
+      "label": "骨梗死的影像学表现及其病理基础",
+      "query": "骨梗死的影像学表现及其病理基础",
+      "verdict": "已核实",
+      "similarity": 0.7229,
+      "tier": "unknown",
+      "candidates": 10,
+      "source": {
+        "title": "骨梗死影像学表现及其病理学基础",
+        "url": "https://www.cjmit.com/cjmit/ch/reader/view_abstract.aspx?file_no=20070527",
+        "site": "中国医学影像技术",
+        "date": "2006/11/21"
+      }
+    },
+    {
+      "index": 14,
+      "label": "超急性期脑梗死CT灌注图中缺血半暗带的定位及病理基础的实验研究",
+      "query": "超急性期脑梗死CT灌注图中缺血半暗带的定位及病理基础的实验研究",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "academic",
+      "candidates": 10,
+      "source": {
+        "title": "超急性期脑梗死CT灌注图中缺血半暗带的定位及病理基础的实验研究",
+        "url": "http://dianda.cqvip.com/Qikan/Article/Detail?id=10656555",
+        "site": "维普网",
+        "date": ""
+      }
+    },
+    {
+      "index": 15,
+      "label": "创伤后肝细胞凋亡与坏死的检测及其意义",
+      "query": "创伤后肝细胞凋亡与坏死的检测及其意义",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "academic",
+      "candidates": 10,
+      "source": {
+        "title": "创伤后肝细胞凋亡与坏死的检测及其意义",
+        "url": "https://www.zgkjqk.com/periodical/dyjydxxb/dyjydxxb200205004",
+        "site": "中国科技期刊数字化集群",
+        "date": "2002/01/01"
+      }
+    },
+    {
+      "index": 16,
+      "label": "心力衰竭心肌细胞凋亡及其调控机制的研究",
+      "query": "心力衰竭心肌细胞凋亡及其调控机制的研究",
+      "verdict": "存疑",
+      "similarity": 0.5111,
+      "tier": "unknown",
+      "candidates": 10,
+      "source": {
+        "title": "慢性心力衰竭心肌细胞凋亡及中医药干预",
+        "url": "https://www.syfjxzz.com/article/doi/10.13422/j.cnki.syfjx.20241813",
+        "site": "中国实验方剂学杂志",
+        "date": "2025/07/10"
+      }
+    },
+    {
+      "index": 17,
+      "label": "高血压心脏重构",
+      "query": "高血压心脏重构",
+      "verdict": "存疑",
+      "similarity": 0.6133,
+      "tier": "farm",
+      "candidates": 10,
+      "source": {
+        "title": "高血压心脏的主要改变是什么",
+        "url": "https://m.bohe.cn/ask/liangyi/i0jcdxcn08kepsd.html",
+        "site": "博禾医生",
+        "date": ""
+      }
+    },
+    {
+      "index": 18,
+      "label": "高血压微血管发病机制研究进展",
+      "query": "高血压微血管发病机制研究进展",
+      "verdict": "查无出处",
+      "similarity": 0.2831,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "为何高血压患者的血压降低后,头晕头胀依旧?韩晶岩教授揭示脑微血管“渗漏”的机理和中医药新解",
+        "url": "https://www.news.cn/digital/20260206/0f17a8c6c68a4c4cbc46d3e8770544fc/c.html",
+        "site": "新华网",
+        "date": "2026/02/06"
+      }
+    },
+    {
+      "index": 19,
+      "label": "糖尿病肝微血管病变临床病理学观察",
+      "query": "糖尿病肝微血管病变临床病理学观察",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "academic",
+      "candidates": 10,
+      "source": {
+        "title": "糖尿病肝微血管病变临床病理学观察",
+        "url": "https://rs.yiigle.com/cmaid/90339",
+        "site": "医谷网",
+        "date": ""
+      }
+    },
+    {
+      "index": 20,
+      "label": "糖尿病足神经病变与血管病变的病理学研究",
+      "query": "糖尿病足神经病变与血管病变的病理学研究",
+      "verdict": "查无出处",
+      "similarity": 0.3247,
+      "tier": "farm",
+      "candidates": 10,
+      "source": {
+        "title": "糖尿病神经病变会导致糖尿病足",
+        "url": "https://mip.mfk.com/ask/20870654.shtml",
+        "site": "民福康",
+        "date": "2026/09/26"
+      }
+    }
+  ]
+}

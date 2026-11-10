@@ -1,0 +1,303 @@
+{
+  "title": "医学陈述溯源核查",
+  "version": "standard",
+  "calls": 19,
+  "total": 19,
+  "verified": 12,
+  "doubt": 4,
+  "missing": 3,
+  "misleading": 3,
+  "empty_result": 0,
+  "tier_counts": {
+    "media": 11,
+    "official": 6,
+    "unknown": 2
+  },
+  "items": [
+    {
+      "index": 1,
+      "label": "总体结论：首选沙坦类（尤其是氯沙坦），严格避开噻嗪类利尿剂，次选普利类或特定β受体阻滞剂",
+      "query": "首选沙坦 尤其是氯沙坦 次选普利 严格避开噻嗪 噻嗪类利尿剂",
+      "verdict": "查无出处",
+      "similarity": 0.3333,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "高压不高低压高,选择什么降压药?",
+        "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=557862",
+        "site": "科普中国网",
+        "date": "2024/12/15"
+      }
+    },
+    {
+      "index": 2,
+      "label": "一、首选：沙坦类（ARB） 代表药物：氯沙坦、缬沙坦等",
+      "query": "氯沙坦 缬沙坦 ARB",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "实话石说  “沙坦”类降压药物,因药而异,因人而异",
+        "url": "https://www.thepaper.cn/newsDetail_forward_31164078",
+        "site": "澎湃新闻",
+        "date": "2025/07/11"
+      }
+    },
+    {
+      "index": 3,
+      "label": "用药依据：国家老年疾病临床医学研究中心发布的《高尿酸血症与痛风健康管理指南》（2025年）明确指出，合并…",
+      "query": "药物包括氯沙坦 高血压 痛风 高尿酸血症",
+      "verdict": "已核实",
+      "similarity": 0.75,
+      "tier": "official",
+      "candidates": 10,
+      "source": {
+        "title": "18种高血压首选/禁用药",
+        "url": "https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html",
+        "site": "玛纳斯县人民政府网",
+        "date": "2022/10/19"
+      }
+    },
+    {
+      "index": 4,
+      "label": "氯沙坦在降压的同时还能促进尿酸排泄",
+      "query": "氯沙坦 尿酸",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "你的尿酸为啥偷偷涨了?快看有没有用这类药!",
+        "url": "https://www.peopleapp.com/rmharticle/30018418207",
+        "site": "人民日报",
+        "date": "2020/11/20"
+      }
+    },
+    {
+      "index": 5,
+      "label": "用药期间需定期监测血钾和肾功能",
+      "query": "血钾 肾功能 首选沙坦",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "不伤肾的降压药有哪些?关键在于代谢路径与靶器官保护平衡",
+        "url": "https://www.kepuchina.cn/article/articleinfo?ar_id=717168&business_type=100&classify=0",
+        "site": "科普中国网",
+        "date": "2026/07/06"
+      }
+    },
+    {
+      "index": 6,
+      "label": "与尿酸的相互影响：氯沙坦具有明确的促尿酸排泄作用，可使血尿酸水平进一步下降约7%～15%，是高血压合并高…",
+      "query": "氯沙坦 血尿酸 高血压 高尿酸血症",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "official",
+      "candidates": 10,
+      "source": {
+        "title": "18种高血压首选/禁用药",
+        "url": "https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html",
+        "site": "玛纳斯县人民政府网",
+        "date": "2022/10/19"
+      }
+    },
+    {
+      "index": 7,
+      "label": "二、次选：普利类（ACEI） 代表药物：依那普利、贝那普利、福辛普利等",
+      "query": "依那普利 贝那普利 福辛普利 ACEI",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "普利类降压药,包括哪些药物?这种药物适合哪些人?",
+        "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&classify=0&ar_id=10464",
+        "site": "科普中国网",
+        "date": "2020/03/29"
+      }
+    },
+    {
+      "index": 8,
+      "label": "用药依据：沙坦类与普利类均能有效降压，且对尿酸代谢基本呈中性，不会干扰肾脏对尿酸的排泄",
+      "query": "尿酸 首选沙坦",
+      "verdict": "存疑",
+      "similarity": 1.0,
+      "tier": "official",
+      "candidates": 10,
+      "source": {
+        "title": "18种高血压首选/禁用药",
+        "url": "https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html",
+        "site": "玛纳斯县人民政府网",
+        "date": "2022/10/19"
+      }
+    },
+    {
+      "index": 9,
+      "label": "部分患者可能出现干咳，需监测血肌酐和血钾",
+      "query": "肌酐 血钾 首选沙坦",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "media",
+      "candidates": 9,
+      "source": {
+        "title": "降压药那么多,慢性肾脏病合并高血压患者应该怎么选?",
+        "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&ar_id=479693",
+        "site": "科普中国网",
+        "date": "2024/02/23"
+      }
+    },
+    {
+      "index": 10,
+      "label": "与尿酸的相互影响：对血尿酸水平无明显不良影响，不会加重高尿酸血症，属于安全的备选方案",
+      "query": "血尿酸 高尿酸血症 首选沙坦",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "official",
+      "candidates": 10,
+      "source": {
+        "title": "18种高血压首选/禁用药",
+        "url": "https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html",
+        "site": "玛纳斯县人民政府网",
+        "date": "2022/10/19"
+      }
+    },
+    {
+      "index": 11,
+      "label": "三、备选：β受体阻滞剂 代表药物：美托洛尔、倍他洛尔",
+      "query": "美托洛尔 倍他洛尔 β受体阻滞剂",
+      "verdict": "存疑",
+      "similarity": 0.6667,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "β受体阻滞剂",
+        "url": "https://cloud.kepuchina.cn/newSearch/imgText?id=7164011122605441024",
+        "site": "科普中国网",
+        "date": "2024/03/04"
+      }
+    },
+    {
+      "index": 12,
+      "label": "用药依据：若上述两类药物降压效果不佳或存在禁忌，可考虑选用特定的β受体阻滞剂",
+      "query": "β受体阻滞剂",
+      "verdict": "存疑",
+      "similarity": 1.0,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "[科普中国]-β受体阻滞剂",
+        "url": "https://www.kepuchina.cn/article/articleinfo?business_type=100&classify=0&ar_id=291554",
+        "site": "科普中国网",
+        "date": "2021/12/31"
+      }
+    },
+    {
+      "index": 13,
+      "label": "与尿酸的相互影响：应严格避开盘托洛尔、纳多洛尔等会阻碍尿酸经肾脏排泄的药物",
+      "query": "格避开盘托洛尔 纳多洛尔 尿酸",
+      "verdict": "查无出处",
+      "similarity": 0.3333,
+      "tier": "unknown",
+      "candidates": 10,
+      "source": {
+        "title": "高血压合并其它疾病的合理用药",
+        "url": "https://www.dzjkb.org.cn/dazhongkepu/84511.html",
+        "site": "大众健康报科普网",
+        "date": "2024/06/28"
+      }
+    },
+    {
+      "index": 14,
+      "label": "优先选择美托洛尔或倍他洛尔，它们对尿酸的影响相对较小",
+      "query": "先选择美托洛尔 倍他洛尔 尿酸",
+      "verdict": "存疑",
+      "similarity": 0.6667,
+      "tier": "unknown",
+      "candidates": 10,
+      "source": {
+        "title": "高血压合并其它疾病的合理用药",
+        "url": "https://www.dzjkb.org.cn/dazhongkepu/84511.html",
+        "site": "大众健康报科普网",
+        "date": "2024/06/28"
+      }
+    },
+    {
+      "index": 15,
+      "label": "四、绝对应避免：噻嗪类／袢利尿剂 代表药物：氢氯噻嗪、呋塞米、吲达帕胺等",
+      "query": "氢氯噻嗪 吲达帕胺 噻嗪类 袢利尿剂",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "浅谈六类利尿剂",
+        "url": "https://www.kepuchina.cn/article/articleinfo?ar_id=722731&business_type=100",
+        "site": "科普中国网",
+        "date": "2026/07/27"
+      }
+    },
+    {
+      "index": 16,
+      "label": "避免原因：《国家基层高血压防治管理指南》（2025年）明确指出，高尿酸血症患者慎用噻嗪类利尿剂，痛风患者…",
+      "query": "患者慎用噻嗪 高血压 痛风 高尿酸血症 噻嗪类利尿剂",
+      "verdict": "已核实",
+      "similarity": 0.8,
+      "tier": "official",
+      "candidates": 10,
+      "source": {
+        "title": "18种高血压首选/禁用药",
+        "url": "https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html",
+        "site": "玛纳斯县人民政府网",
+        "date": "2022/10/19"
+      }
+    },
+    {
+      "index": 17,
+      "label": "利尿剂会减少血容量并增加尿酸在肾小管的重吸收，导致血尿酸进一步升高，极易诱发痛风",
+      "query": "血尿酸 痛风 利尿剂",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "东部战区总医院心血管内科:痛风遇上高血压,该如何选择降压药?",
+        "url": "https://www.peopleapp.com/rmharticle/30048814115",
+        "site": "人民日报",
+        "date": "2025/04/17"
+      }
+    },
+    {
+      "index": 18,
+      "label": "用药与随访提示：建议在心内科医生指导下优先尝试氯沙坦",
+      "query": "优先尝试氯沙坦",
+      "verdict": "查无出处",
+      "similarity": 0.0,
+      "tier": "official",
+      "candidates": 10,
+      "source": {
+        "title": "18种高血压首选/禁用药",
+        "url": "https://www.mns.gov.cn/p202/ylwswsjkwyh/20221019/251765.html",
+        "site": "玛纳斯县人民政府网",
+        "date": "2022/10/19"
+      }
+    },
+    {
+      "index": 19,
+      "label": "用药期间每2～4周复查血尿酸、血钾和肾功能，同时注意低盐低嘌呤饮食并适量饮水",
+      "query": "血钾 肾功能 血尿酸 首选沙坦",
+      "verdict": "已核实",
+      "similarity": 1.0,
+      "tier": "media",
+      "candidates": 10,
+      "source": {
+        "title": "肝肾损伤患者选择降压药时,如何减少肝肾负担?",
+        "url": "https://www.kepuchina.cn/article/articleinfo?ar_id=704265&business_type=100",
+        "site": "科普中国网",
+        "date": "2026/05/20"
+      }
+    }
+  ]
+}

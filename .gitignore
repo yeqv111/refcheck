@@ -1,0 +1,24 @@
+# 运行产物
+out/
+*.pyc
+__pycache__/
+*.egg-info/
+build/
+dist/
+
+# 本地凭据
+.env
+.credentials
+
+# 真实数据（含个人隐私）
+inbox/
+
+# macOS
+.DS_Store
+._*
+
+# 原始素材（docx 等，可能含个人作业信息）
+*.docx
+
+# 示例大图：仓库只放压缩版 jpg，原图 png 留在本地
+examples/*.png

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refcheck"
+version = "1.0.0"
+description = "医学信息溯源核查器：用元宝搜索验证 AI 说出的每条医学陈述与参考文献是否有出处"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "桃花键神" }]
+keywords = ["yuanbao", "search", "fact-check", "citation", "medical"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = []
+
+[project.scripts]
+refcheck = "refcheck.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
