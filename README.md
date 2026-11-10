@@ -27,7 +27,7 @@
 不需要装任何第三方库，Python 3.8+ 直接跑。
 
 ```bash
-git clone <repo>
+git clone https://github.com/yeqv111/refcheck.git
 cd refcheck
 
 export TENCENTCLOUD_SECRET_ID=你的SecretId
